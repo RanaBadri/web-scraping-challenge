@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mission To Marsr</title>
+
+  <link rel="icon" type="image" href="https://pngimg.com/uploads/mars_planet/mars_planet_PNG13.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron text-center">
+			<h1>Mars Information</h1>
+		  	<p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+		</div>
+		
+		<div class="box bg-style">
+			<h3>Latest Mars News</h3>
+			<hr class="new1">
+			<h6>{{mars_info.latest_news}}</h6>
+			<p>{{mars_info.paragraph}}</p>
+		</div>
+		<img src="{{mars_info.feature_url}}"/>
+		{{mars_info.html_marstable|safe}}
+		<br>
+
+		{{mars_info.hemisphere_images[0].title}} <br>
+		<img src="{{mars_info.hemisphere_images[0].img_url}}" />
+		<br>
+		{{mars_info.hemisphere_images[1].title}} <br>
+		<img src="{{mars_info.hemisphere_images[1].img_url}}" />
+		<br>
+		{{mars_info.hemisphere_images[2].title}} <br>
+		<img src="{{mars_info.hemisphere_images[2].img_url}}" />
+		<br>
+		{{mars_info.hemisphere_images[3].title}} <br>
+		<img src="{{mars_info.hemisphere_images[3].img_url}}" />
+		<br>
+	</div>
+  </body>
+
+</html>
